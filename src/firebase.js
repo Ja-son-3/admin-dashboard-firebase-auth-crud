@@ -1,15 +1,14 @@
 import { initializeApp } from "firebase/app";
-import * as dotenv from 'dotenv'
-
-dotenv.config()
+import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
     apiKey: process.env.REACT_APP_FIREBASE_KEY,
-    authDomain: process.env.REACT_APP_FIREBASE_AUTHDOMAIN,
-    projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-    storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-    messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-    appId: process.env.REACT_APP_FIREBASE_APP_ID,
+    authDomain: "admin-dashboard-lama-tutorial.firebaseapp.com",
+    projectId: "admin-dashboard-lama-tutorial",
+    storageBucket: "admin-dashboard-lama-tutorial.appspot.com",
+    messagingSenderId: "1071198975068",
+    appId: "1:1071198975068:web:3d9557519ada594695e299"
 };
 
 const app = initializeApp(firebaseConfig);
+export const auth = getAuth()
